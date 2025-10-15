@@ -1,0 +1,87 @@
+ /* ==== variaveis ==== */
+ :root {
+    --marrom-claro: #A67C52;
+    --azul-escuro: #1F3A93;
+    --cor-de-fundo: #F7EFEA;
+    --cor-texto: #000;
+    --cor-btn: #ecf7ea;
+    --cor-btn-hover: #f6eaf7;
+    --sombra-card: rgba(0, 0, 0, 0.08);
+    --sombra-car-hover: rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* ==== Body ==== */
+    body {
+    background-color: var(--cor-de-fundo);
+    font-family: 'Barlow', sans-serif;
+    color: var(--cor-texto);
+    line-height: 1.5;
+    height: auto;
+    }
+ 
+    /* ==== Navbar ==== */
+    .bg-navbar, .offcanvas {
+        background-color: var(--cor-de-fundo);
+        transition: background-color 0.3s ease;
+    }
+
+    .offcanvas-title img, .navbar-brand img {
+        height: 70px; 
+        width: auto;  
+    }
+
+    input[type=checkbox] {
+        border: 2px solid var(--marrom-claro);
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    input[type=checkbox]:checked,
+    input[type="checkbox"]:focus {
+        background-color: var(--marrom-claro);
+        border-color: var(--marrom-claro);
+        box-shadow: none;
+        outline: none;
+    }
+
+/* ==== Banner ==== */
+    .banner-1 {
+        background-image: url(./assets/banner1.png);
+    }
+
+    .banners {
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+ /* ======== CARDS ======== */
+    .card {
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px var(--sombra-card);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px var(--sombra-car-hover);
+    }
+
+    .card-title {
+        color: var(--azul-escuro);
+    }
+
+    .botao-claro {
+        background-color: var(--cor-btn);
+        color: var(--cor-texto);
+        border: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .botao-claro:hover {
+        background-color: var(--cor-btn-hover);
+        color: var(--cor-texto);
+    }
