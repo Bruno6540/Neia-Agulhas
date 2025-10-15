@@ -1,8 +1,17 @@
  /* ==== variaveis ==== */
  :root {
+    --cor-apoio: #E0CDB5;
+    --cor-contraste: #A2B29F;
+    --cor-base: #F7EFEA;
+    --cor-destaque: #C8A27A;
+    --cor-titulo: #5B4033;
+    --cor-opicional: #EBD3CA;
+    --texto-principal: #2E2E2E;
+
+
+
     --marrom-claro: #A67C52;
     --azul-escuro: #1F3A93;
-    --cor-de-fundo: #F7EFEA;
     --cor-texto: #000;
     --cor-btn: #ecf7ea;
     --cor-btn-hover: #f6eaf7;
@@ -12,7 +21,7 @@
  
  /* ==== Body ==== */
     body {
-    background-color: var(--cor-de-fundo);
+    background-color: var(--cor-base);
     font-family: 'Barlow', sans-serif;
     color: var(--cor-texto);
     line-height: 1.5;
@@ -21,7 +30,7 @@
  
     /* ==== Navbar ==== */
     .bg-navbar, .offcanvas {
-        background-color: var(--cor-de-fundo);
+        background-color: var(--cor-base);
         transition: background-color 0.3s ease;
     }
 
