@@ -6,37 +6,39 @@
     --cor-destaque: #C8A27A;
     --cor-titulo: #5B4033;
     --cor-opicional: #EBD3CA;
-    --texto-principal: #2E2E2E;
-
-
-
     --marrom-claro: #A67C52;
-    --azul-escuro: #1F3A93;
-    --cor-texto: #000;
-    --cor-btn: #ecf7ea;
-    --cor-btn-hover: #f6eaf7;
     --sombra-card: rgba(0, 0, 0, 0.08);
     --sombra-car-hover: rgba(0, 0, 0, 0.1);
+    --texto-principal: #2E2E2E;
  }
  
  /* ==== Body ==== */
     body {
     background-color: var(--cor-base);
     font-family: 'Barlow', sans-serif;
-    color: var(--cor-texto);
+    color: var(--texto-principal);
     line-height: 1.5;
-    height: auto;
     }
+
  
-    /* ==== Navbar ==== */
+/* ==== Navbar ==== */
+    .offcanvas-title img, .navbar-brand img {
+        height: 70px; 
+        width: auto;  
+    }
+    
     .bg-navbar, .offcanvas {
         background-color: var(--cor-base);
         transition: background-color 0.3s ease;
     }
 
-    .offcanvas-title img, .navbar-brand img {
-        height: 70px; 
-        width: auto;  
+    .nav-link {
+        color: var(--cor-titulo);
+        font-weight: 600;
+    }
+
+    .nav-link:hover {
+        color: var(--cor-destaque);
     }
 
     input[type=checkbox] {
@@ -66,12 +68,19 @@
         background-position: center;
         background-attachment: fixed;
     }
- /* ======== CARDS ======== */
+    
+    .banners-titulo {
+        background-color: var(--cor-contraste);
+        color: var(--texto-principal);
+    }
+
+ /* ==== CARDS ==== */
     .card {
         border: none;
         border-radius: 8px;
         box-shadow: 0 4px 8px var(--sombra-card);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
+        background-color: var(--cor-opicional);
     }
 
     .card:hover {
@@ -80,17 +89,28 @@
     }
 
     .card-title {
-        color: var(--azul-escuro);
+        color: var(--cor-titulo);
     }
 
+/* ==== Botões ==== */
+
+    .botao-padrao,
     .botao-claro {
-        background-color: var(--cor-btn);
-        color: var(--cor-texto);
+        background-color: var(--cor-destaque);
+        color: var(--texto-principal);
         border: none;
         transition: background-color 0.2s ease;
     }
 
+    .botao-padrao:hover,
     .botao-claro:hover {
-        background-color: var(--cor-btn-hover);
-        color: var(--cor-texto);
+        background-color: var(--cor-apoio);
+        color: var(--texto-principal);
+    }
+
+/* ==== Rodapé ==== */
+    .footer {
+        background-color: var(--cor-titulo);
+        color: var(--cor-base);
+        font-size: 0.9rem;
     }
