@@ -129,3 +129,13 @@
         height: 60vh; 
     }
 }
+
+@media (min-width: 992px) {
+    /* Seleciona apenas a navbar principal, não o offcanvas */
+    header .navbar-nav {
+        justify-content: center !important; /* centraliza horizontalmente */
+        flex-grow: 0; /* remove crescimento para ocupar todo o espaço */
+        padding-left: 0; /* remove padding que empurra para a direita */
+    }
+}
+
