@@ -70,6 +70,7 @@
     }
     
     .banners-titulo {
+        --bs-bg-opacity: .7;
         background-color: var(--cor-contraste);
         color: var(--texto-principal);
     }
