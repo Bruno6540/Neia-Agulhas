@@ -115,3 +115,11 @@
         color: var(--cor-base);
         font-size: 0.9rem;
     }
+
+    @media (max-width: 768px) {
+  .banner-1 {
+    background-attachment: scroll;
+    background-position: center center;
+    height: 60vh; /* opcional: deixa menor no mobile */
+  }
+}
