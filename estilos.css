@@ -80,6 +80,11 @@
     }
 
  /* ==== CARDS ==== */
+    section.py-5 h2.text-center {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
     .card {
         border: none;
         border-radius: 8px;
@@ -95,7 +100,14 @@
 
     .card-title {
         color: var(--cor-titulo);
+        text-align: center;
     }
+
+    .card-text {
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.6;
+}
 
 /* ==== Botões ==== */
 
