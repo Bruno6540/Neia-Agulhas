@@ -127,14 +127,36 @@
 
 /* ==== Rodapé ==== */
    
-    .footer-custom p {
+    .footer-custom {
         background-color: var(--cor-contraste);
         color: var(--texto-principal);
-        margin: 0;
-        padding-bottom: 1rem;
+        padding: 3rem 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 80px;
     }
 
-    @media (max-width: 768px) {
+    .footer-custom p {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    .footer-icones a {
+        color: var(--cor-destaque);
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+        transition: color 0.2 ease, tranform 0.2s ease;
+    }
+
+    .footer-icones a:hover {
+        color: var(--cor-apoio);
+        transform: scale(1.1);
+    }
+
+
+@media (max-width: 768px) {
     .banner-1 {
         background-attachment: scroll;
         background-position: center center;
