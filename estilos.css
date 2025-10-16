@@ -1,7 +1,7 @@
  /* ==== variaveis ==== */
  :root {
     --cor-apoio: #E0CDB5;
-    --cor-contraste: #A2B29F;
+    --cor-contraste: #FCF2E5;
     --cor-base: #F7EFEA;
     --cor-destaque: #C8A27A;
     --cor-titulo: #5B4033;
@@ -14,13 +14,12 @@
  
  /* ==== Body ==== */
     body {
-    background-color: var(--cor-base);
-    font-family: 'Barlow', sans-serif;
-    color: var(--texto-principal);
-    line-height: 1.5;
+        background-image: url(./assets/imagemBase.png);
+        font-family: 'Barlow', sans-serif;
+        color: var(--texto-principal);
+        line-height: 1.5;
     }
 
- 
 /* ==== Navbar ==== */
     .offcanvas-title img, .navbar-brand img {
         height: 70px; 
@@ -71,7 +70,6 @@
     
     .banners-titulo {
         --bs-bg-opacity: .7;
-        background-color: var(--cor-contraste);
         color: var(--texto-principal);
     }
 
@@ -110,16 +108,18 @@
     }
 
 /* ==== Rodapé ==== */
-    .footer {
-        background-color: var(--cor-titulo);
-        color: var(--cor-base);
-        font-size: 0.9rem;
+   
+    .footer-custom p {
+        background-color: var(--cor-contraste);
+        color: var(--texto-principal);
+        margin: 0;
+        padding-bottom: 1rem;
     }
 
     @media (max-width: 768px) {
-  .banner-1 {
-    background-attachment: scroll;
-    background-position: center center;
-    height: 60vh; /* opcional: deixa menor no mobile */
-  }
+    .banner-1 {
+        background-attachment: scroll;
+        background-position: center center;
+        height: 60vh; 
+    }
 }
