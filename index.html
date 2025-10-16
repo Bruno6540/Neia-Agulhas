@@ -34,16 +34,16 @@
                                 alt="Logo da Neia Agulhas"></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
+                    <div class="offcanvas-body d-flex justify-content-between align-items-center">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="#">Início</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Sobre</a>
+                                <a class="nav-link" href="#produtos">Produtos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contato</a>
+                                <a class="nav-link" href="#contatos">Contato</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
@@ -61,12 +61,8 @@
         </nav>
     </header>
 
-    <!--imagem cabeçalho-->
-    <section class="cabecalho cabecalho-1">
-    </section>
-
     <!-- BANNER 1 -->
-    <section class="banners banner-1 d-flex flex-column justify-content-center text-center">
+    <section id="inicio" class="banners banner-1 d-flex flex-column justify-content-center text-center">
         <div class="banners-titulo bg-body-secondary py-5">
             <h2 class="fw-bold ">Feito à mão, com calma e com alma.</h2>
             <p>Mais do que peças, histórias tecidas com amor em cada ponto.
@@ -222,7 +218,7 @@
         </div>
     </section>
 
-    <div class="container row mx-auto my-3 my-xl-5">
+    <div id="produtos" class="container row mx-auto my-3 my-xl-5">
 
         <div class="col-12 col-md-6 col-xxl-4 pb-4">
             <div class="card rounded-0">
@@ -321,8 +317,6 @@
         </div>
 
     </div>
-
-    
 
     <!-- CANVAS 1 -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-1" aria-labelledby="offcanvasRightLabel">

@@ -11,10 +11,16 @@
     --sombra-car-hover: rgba(0, 0, 0, 0.1);
     --texto-principal: #2E2E2E;
  }
+
+ /* ==== HTML ==== */
+    html {
+        scroll-behavior: smooth;
+ }
  
  /* ==== Body ==== */
     body {
         background-image: url(./assets/imagemBase.png);
+        background-color: var(--cor-base);
         font-family: 'Barlow', sans-serif;
         color: var(--texto-principal);
         line-height: 1.5;
@@ -31,12 +37,12 @@
         transition: background-color 0.3s ease;
     }
 
-    .nav-link {
+    .navbar-nav, .nav-link {
         color: var(--cor-titulo);
         font-weight: 600;
     }
 
-    .nav-link:hover {
+    .navbar-nav, .nav-link:hover {
         color: var(--cor-destaque);
     }
 
@@ -83,8 +89,8 @@
     }
 
     .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px var(--sombra-car-hover);
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px var(--sombra-car-hover);
     }
 
     .card-title {
