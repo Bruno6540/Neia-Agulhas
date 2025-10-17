@@ -8,7 +8,7 @@
     --cor-titulo: #5B4033;
     --cor-opicional: #EBD3CA;
     --marrom-claro: #A67C52;
-    --texto-principal: #2E2E2E;
+    --texto-principal: #1e1e1e;
 
     /* Sombras */
     --sombra-card: rgba(0, 0, 0, 0.08);
@@ -32,8 +32,8 @@
     --raio-borda: 8px;
 
     /* Transições */
-    --transicao-curta: 0.2s ease;
-    --transicao-media: 0.3s ease;
+    --transicao-curta: 0.3s ease;
+    --transicao-media: 0.4s ease;
  }
 
  /* ==== HTML ==== */
@@ -48,6 +48,17 @@
         font-family: var(--fonte-principal);
         color: var(--texto-principal);
         line-height: 1.5;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 2.2rem;
+        color: var(--cor-titulo);
+    }
+
+    p {
+        font-size: 1.05rem;
+        line-height: 1.7;
     }
 
 /* ==== Navbar ==== */
@@ -107,12 +118,12 @@
  /* ==== CARDS ==== */
     section.py-5 h2.text-center {
         text-align: center;
-        margin-bottom: var(--espaco-md);
+        margin-bottom: 2rem;
     }
 
     .card {
         border: none;
-        border-radius: var(--raio-borda);
+        border-radius: var(--raio-borda, 15px);
         box-shadow: 0 4px 8px var(--sombra-card);
         transition: transform var(--transicao-curta), box-shadow var(--transicao-curta);
         background-color: var(--cor-opicional);
@@ -120,7 +131,8 @@
 
     .card:hover {
         transform: scale(1.05);
-        box-shadow: 0 8px 16px var(--sombra-car-hover);
+        box-shadow: 0 10px 20px var(--sombra-car-hover);
+        transition: all 0.6 ease;
     }
 
     .card img {
@@ -141,15 +153,19 @@
     }
 
     .card-title {
+        font-weight: 600;
+        font-size: 1.3rem;
         color: var(--cor-titulo);
         text-align: center;
+        margin-bottom: 0.8rem;
     }
 
     .card-text {
+        font-size: 1.05rem;
+        line-height: 1.7;
         text-align: justify;
         text-justify: inter-word;
-        line-height: 1.6;
-}
+    }
 
 /* ==== Botões ==== */
 
@@ -165,6 +181,7 @@
     .botao-padrao:hover,
     .botao-claro:hover {
         background-color: var(--cor-apoio);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         color: var(--texto-principal);
     }
 
@@ -194,8 +211,9 @@
     }
 
     .footer-icones a:hover {
-        color: var(--cor-apoio);
-        transform: scale(1.1);
+        color: var(--cor-titulo);
+        transform: scale(1.2);
+        filter: brightness(1.2);
     }
 
 
@@ -227,5 +245,11 @@
         justify-content: center; 
         flex-grow: 0; 
         padding-left: 0; 
+    }
+
+    .form-switch label {
+        margin-left: 8px;
+        font-size: 0.9rem;
+        cursor: pointer;
     }
 }
