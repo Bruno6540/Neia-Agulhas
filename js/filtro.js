@@ -51,3 +51,49 @@ btnFiltrarProdutosKits.addEventListener("click", () => filtrarProdutos("Kits"));
 btnFiltrarProdutosFestas.addEventListener("click", () =>
   filtrarProdutos("Festas")
 );
+
+// ===== BUSCA DE PRODUTOS =====
+function buscarProdutos(termo) {
+  termo = termo.toLowerCase();
+  const filtrados = listaProdutos.filter(
+    (produto) =>
+      produto.nome.toLowerCase().includes(termo) ||
+      produto.descricao.toLowerCase().includes(termo) ||
+      produto.tipo.toLowerCase().includes(termo)
+  );
+  renderizarProdutos(filtrados);
+}
+
+// eventos para busca desktop e mobile
+const inputBusca = document.getElementById("buscaProduto");
+const inputBuscaMobile = document.getElementById("buscaProdutoMobile");
+
+if (inputBusca) {
+  inputBusca.addEventListener("input", (e) => buscarProdutos(e.target.value));
+}
+if (inputBuscaMobile) {
+  inputBuscaMobile.addEventListener("input", (e) =>
+    buscarProdutos(e.target.value)
+  );
+}
+
+// ===== ORDENAR PRODUTOS =====
+const selectOrdenar = document.getElementById("ordenarProdutos");
+
+if (selectOrdenar) {
+  selectOrdenar.addEventListener("change", (e) => {
+    const criterio = e.target.value;
+    let produtosAtuais = Array.from(container.children).map(
+      (el, index) => listaProdutos[index]
+    );
+    let ordenados = [...listaProdutos];
+
+    if (criterio === "nome") {
+      ordenados.sort((a, b) => a.nome.localeCompare(b.nome));
+    } else if (criterio === "preco") {
+      ordenados.sort((a, b) => a.preco - b.preco);
+    }
+
+    renderizarProdutos(ordenados);
+  });
+}
