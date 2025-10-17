@@ -23,7 +23,7 @@ fetch("./produtos.json")
             <p>${produto.preco}</p>
             <a href="https://wa.me/5511985658280?text=${encodeURIComponent(
               produto.whatsappMsg
-            )}" target="_blank" class="btn botao-claro"><i class="bi bi-cart4"></i></a>
+            )}" target="_blank" class="btn botao-claro"><i class="bi bi-basket2"></i></a>
           </div>
         </div>
       `;
