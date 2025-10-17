@@ -221,16 +221,19 @@
 
         <div class="col-12 col-md-6 col-xxl-4 pb-4">
             <div class="card">
-                <img class="d-md-none d-block" src="./assets/Tapete.png" alt="...">
-                <img class="d-none d-md-block d-xl-none" src="./assets/Tapete.png" alt="...">
-                <img class="d-none d-xl-block" src="./assets/Tapete.png" alt="...">
+                <img class="d-md-none d-block" src="./assets/Tapete.png" alt="..." data-bs-toggle="modal"
+                    data-bs-target="#modalProduto1">
+                <img class="d-none d-md-block d-xl-none" src="./assets/Tapete.png" alt="..." data-bs-toggle="modal"
+                    data-bs-target="#modalProduto1">
+                <img class="d-none d-xl-block" src="./assets/Tapete.png" alt="..." data-bs-toggle="modal"
+                    data-bs-target="#modalProduto1">
                 <div class="card-body">
                     <h5 class="card-title">Camiseta Conforto </h5>
                     <p class="card-text">Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão.
                         Modelagem
                         unissex.</p>
                     <p>R$70,00</p>
-                    <a href="#" class="btn botao-claro border-0">Ver mais</a>
+                    <a href="#" target="_blank" class="btn botao-claro">Ver mais</a>
                 </div>
             </div>
         </div>
@@ -494,6 +497,65 @@
             </div>
         </div>
 
+    </div>
+
+    <!-- ModalProduto1-->
+    <!-- Modal -->
+    <div class="modal fade" id="modalProduto1" tabindex="-1" aria-labelledby="modalProduto1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProduto1Label">Produto Artesanal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <!-- Corpo do modal -->
+                <div class="modal-body">
+                    <!-- Carrossel -->
+                    <div id="carouselProduto1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/Tapete.png" class="d-block w-100 carousel-img" alt="Imagem 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/Tapete.png" class="d-block w-100 carousel-img" alt="Imagem 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/Tapete.png" class="d-block w-100 carousel-img" alt="Imagem 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/Tapete.png" class="d-block w-100 carousel-img" alt="Imagem 4">
+                            </div>
+                            <div class="carousel-item">
+                                <video class="d-block w-100" controls>
+                                    <source src="./assets/Tapete.png" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Controles -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduto1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProduto1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <!-- Rodape -->
