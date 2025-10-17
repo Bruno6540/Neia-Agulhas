@@ -162,6 +162,21 @@
         background-position: center center;
         height: 60vh; 
     }
+
+    .footer-custom {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .footer-icones {
+        margin-left: 0;
+    }
+
+    .footer-icones a {
+        margin: 0 1rem;
+    }
 }
 
 @media (min-width: 992px) {
