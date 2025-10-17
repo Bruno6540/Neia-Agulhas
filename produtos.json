@@ -13,7 +13,7 @@
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
     "preco": "R$50,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Vermelho.",
-    "tipo": "acessorios"
+    "tipo": "Bolsas"
   },
   {
     "nome": "Tapete Verde",
@@ -21,7 +21,7 @@
     "descricao": "Tapete macio, feito à mão, perfeito para salas e quartos.",
     "preco": "R$70,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Tapete Verde.",
-    "tipo": "tapetes"
+    "tipo": "Casacos"
   },
   {
     "nome": "Trilho Vermelho",
@@ -29,7 +29,7 @@
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
     "preco": "R$50,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Vermelho.",
-    "tipo": "acessorios"
+    "tipo": "Calçados"
   },
   {
     "nome": "Tapete Verde",
@@ -37,7 +37,7 @@
     "descricao": "Tapete macio, feito à mão, perfeito para salas e quartos.",
     "preco": "R$70,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Tapete Verde.",
-    "tipo": "tapetes"
+    "tipo": "Kits"
   },
   {
     "nome": "Trilho Vermelho",
@@ -45,6 +45,6 @@
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
     "preco": "R$50,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Vermelho.",
-    "tipo": "acessorios"
+    "tipo": "Festas"
   }
 ]
