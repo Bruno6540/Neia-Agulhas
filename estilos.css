@@ -167,6 +167,17 @@
         text-justify: inter-word;
     }
 
+/* ==== Modais ==== */
+.modal-titulo {
+    font-family: var(--fonte-principal);
+    font-style: 700;
+    font-size: 2rem;
+    color: var(--cor-titulo);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
 /* ==== Botões ==== */
 
     .botao-padrao,
