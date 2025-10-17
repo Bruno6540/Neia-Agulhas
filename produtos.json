@@ -1,7 +1,7 @@
 [
   {
     "nome": "Tapete Verde",
-    "imagem": "./assets/Tapete.png",
+    "imagens": ["./assets/Tapete.png", "./assets/Tapete.png", "./assets/Tapete.png", "./assets/Trilho.png"],
     "descricao": "Tapete macio, feito à mão, perfeito para salas e quartos.",
     "preco": "R$70,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Tapete Verde.",
@@ -9,15 +9,15 @@
   },
   {
     "nome": "Trilho Vermelho",
-    "imagem": "./assets/Trilho.png",
+    "imagens": ["./assets/Trilho.png", "./assets/Trilho.png", "./assets/Trilho.png", "./assets/Tapete.png"],
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
     "preco": "R$50,00",
-    "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Bege.",
+    "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Vermelho.",
     "tipo": "acessorios"
   },
   {
     "nome": "Tapete Verde",
-    "imagem": "./assets/Tapete.png",
+    "imagens": ["./assets/Tapete.png", "./assets/Tapete.png", "./assets/Tapete.png", "./assets/Trilho.png"],
     "descricao": "Tapete macio, feito à mão, perfeito para salas e quartos.",
     "preco": "R$70,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Tapete Verde.",
@@ -25,15 +25,15 @@
   },
   {
     "nome": "Trilho Vermelho",
-    "imagem": "./assets/Trilho.png",
+    "imagens": ["./assets/Trilho.png", "./assets/Trilho.png", "./assets/Trilho.png", "./assets/Tapete.png"],
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
     "preco": "R$50,00",
-    "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Bege.",
+    "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Vermelho.",
     "tipo": "acessorios"
   },
   {
     "nome": "Tapete Verde",
-    "imagem": "./assets/Tapete.png",
+    "imagens": ["./assets/Tapete.png", "./assets/Tapete.png", "./assets/Tapete.png", "./assets/Trilho.png"],
     "descricao": "Tapete macio, feito à mão, perfeito para salas e quartos.",
     "preco": "R$70,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Tapete Verde.",
@@ -41,10 +41,10 @@
   },
   {
     "nome": "Trilho Vermelho",
-    "imagem": "./assets/Trilho.png",
+    "imagens": ["./assets/Trilho.png", "./assets/Trilho.png", "./assets/Trilho.png", "./assets/Tapete.png"],
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
     "preco": "R$50,00",
-    "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Bege.",
+    "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Vermelho.",
     "tipo": "acessorios"
   }
 ]
