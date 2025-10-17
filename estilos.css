@@ -227,7 +227,6 @@
         filter: brightness(1.2);
     }
 
-
 @media (max-width: 768px) {
     .banner-1 {
         background-attachment: scroll;
