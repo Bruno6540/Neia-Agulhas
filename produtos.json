@@ -8,7 +8,7 @@
     "tipo": "tapetes"
   },
   {
-    "nome": "Trilho Vermelho",
+    "nome": "Bolsa Vermelha",
     "imagens": ["./assets/Trilho.png", "./assets/Trilho.png", "./assets/Trilho.png", "./assets/Tapete.png"],
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
     "preco": "R$50,00",
@@ -16,7 +16,7 @@
     "tipo": "Bolsas"
   },
   {
-    "nome": "Tapete Verde",
+    "nome": "Casaco Verde",
     "imagens": ["./assets/Tapete.png", "./assets/Tapete.png", "./assets/Tapete.png", "./assets/Trilho.png"],
     "descricao": "Tapete macio, feito à mão, perfeito para salas e quartos.",
     "preco": "R$70,00",
@@ -24,7 +24,7 @@
     "tipo": "Casacos"
   },
   {
-    "nome": "Trilho Vermelho",
+    "nome": "Sapato",
     "imagens": ["./assets/Trilho.png", "./assets/Trilho.png", "./assets/Trilho.png", "./assets/Tapete.png"],
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
     "preco": "R$50,00",
@@ -32,7 +32,7 @@
     "tipo": "Calçados"
   },
   {
-    "nome": "Tapete Verde",
+    "nome": "Kit completo",
     "imagens": ["./assets/Tapete.png", "./assets/Tapete.png", "./assets/Tapete.png", "./assets/Trilho.png"],
     "descricao": "Tapete macio, feito à mão, perfeito para salas e quartos.",
     "preco": "R$70,00",
@@ -40,7 +40,7 @@
     "tipo": "Kits"
   },
   {
-    "nome": "Trilho Vermelho",
+    "nome": "Produto de Festa",
     "imagens": ["./assets/Trilho.png", "./assets/Trilho.png", "./assets/Trilho.png", "./assets/Tapete.png"],
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
     "preco": "R$50,00",
