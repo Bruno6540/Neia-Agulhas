@@ -234,6 +234,10 @@
         height: 60vh; 
     }
 
+     .btn-filtro {
+        padding-bottom: 50px;
+    }
+
     .footer-custom {
         flex-direction: column;
         text-align: center;
