@@ -98,7 +98,7 @@
 
 /* ==== Banner ==== */
     .banner-1 {
-        background-image: url(./assets/banner1.png);
+        background-image: url(.././assets/banner1.png);
     }
 
     .banners {
