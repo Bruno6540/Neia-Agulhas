@@ -196,6 +196,24 @@
         color: var(--texto-principal);
     }
 
+    .btn-favorito {
+        transition: 0.3s;
+    }
+
+    .btn-favorito i {
+        color: var(--texto-principal);
+        transition: 0.3s;
+    }
+
+    .btn-favorito.ativo i {
+        color: #e63946; /* vermelho quando favoritado */
+    }
+
+    .btn-favorito:hover i {
+        transform: scale(1.1);
+        color: #e63946;
+    }
+
 /* ==== Rodapé ==== */
    
     .footer-custom {
