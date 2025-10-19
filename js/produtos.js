@@ -1,15 +1,16 @@
 let listaProdutos = [];
 const container = document.getElementById("produtos");
 
-// ---- FAVORITOS UTILITÁRIOS ----
+// Funções de favoritos
 function getFavoritos() {
   return JSON.parse(localStorage.getItem("favoritos")) || [];
 }
+
 function salvarFavoritos(favs) {
   localStorage.setItem("favoritos", JSON.stringify(favs));
 }
 
-// ---- CARREGAR PRODUTOS ----
+// Carregar produtos do JSON
 fetch("./produtos.json")
   .then((res) => res.json())
   .then((produtos) => {
@@ -18,25 +19,26 @@ fetch("./produtos.json")
   })
   .catch((err) => console.error(err));
 
+// Renderizar produtos
 function renderizarProdutos(produtos) {
   container.innerHTML = "";
   const favoritos = getFavoritos();
 
   produtos.forEach((produto, i) => {
-    const produtoId = produto.id || i;
-    const modalId = `modal${produtoId}`;
-    const carrosselId = `carousel${produtoId}`;
+    const produtoId = produto.nome; // Usando nome como referência única para favoritos
+    const modalId = `modal${i}`;
+    const carrosselId = `carousel${i}`;
     const isFav = favoritos.includes(produtoId);
 
     const card = document.createElement("div");
     card.className = "col-12 col-md-6 col-xxl-4 pb-4";
     card.innerHTML = `
       <div class="card">
-        <img src="${produto.imagens[0]}" 
-             class="d-block w-100 carousel-img" 
-             alt="${produto.nome}" 
-             data-bs-toggle="modal" 
-             data-bs-target="#${modalId}">
+        <img src="${
+          produto.imagens[0]
+        }" class="d-block w-100 carousel-img" alt="${
+      produto.nome
+    }" data-bs-toggle="modal" data-bs-target="#${modalId}">
         <div class="card-body d-flex flex-column justify-content-between">
           <div>
             <h5 class="card-title">${produto.nome}</h5>
@@ -44,16 +46,14 @@ function renderizarProdutos(produtos) {
             <p>${produto.preco}</p>
           </div>
           <div class="d-flex justify-content-between align-items-center">
-            <button class="btn botao-claro btn-favorito ${
-              isFav ? "ativo" : ""
-            }" data-id="${produtoId}">
-              <i class="bi ${isFav ? "bi-heart-fill" : "bi-heart"}"></i>
+            <button class="btn botao-claro btn-favorito" data-nome="${produtoId}">
+              <i class="bi ${isFav ? "bi-heart-fill" : "bi-heart"}" style="${
+      isFav ? "color:red" : ""
+    }"></i>
             </button>
             <a href="https://wa.me/5511985658280?text=${encodeURIComponent(
               produto.whatsappMsg
-            )}" 
-               target="_blank" 
-               class="btn botao-claro">
+            )}" target="_blank" class="btn botao-claro">
               <i class="bi bi-basket2"></i>
             </a>
           </div>
@@ -62,7 +62,7 @@ function renderizarProdutos(produtos) {
     `;
     container.appendChild(card);
 
-    // Modal
+    // Modal do produto
     const modal = document.createElement("div");
     modal.className = "modal fade";
     modal.id = modalId;
@@ -93,15 +93,15 @@ function renderizarProdutos(produtos) {
                   .join("")}
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#${carrosselId}" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#${carrosselId}" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
               </button>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn botao-claro btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <p class="mt-3">${produto.descricao}</p>
           </div>
         </div>
       </div>
@@ -109,38 +109,18 @@ function renderizarProdutos(produtos) {
     document.body.appendChild(modal);
   });
 
-  // ---- EVENTOS FAVORITAR ----
+  // Adicionar evento de favoritos
   document.querySelectorAll(".btn-favorito").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const id = btn.dataset.id;
+      const nome = btn.getAttribute("data-nome");
       let favs = getFavoritos();
-
-      if (favs.includes(id)) {
-        favs = favs.filter((f) => f !== id);
+      if (favs.includes(nome)) {
+        favs = favs.filter((f) => f !== nome);
       } else {
-        favs.push(id);
+        favs.push(nome);
       }
-
       salvarFavoritos(favs);
-      atualizarFavoritosUI();
+      renderizarProdutos(produtos); // Atualiza visual
     });
-  });
-
-  atualizarFavoritosUI();
-}
-
-// ---- Atualiza cor do coração ----
-function atualizarFavoritosUI() {
-  const favs = getFavoritos();
-  document.querySelectorAll(".btn-favorito").forEach((btn) => {
-    const id = btn.dataset.id;
-    const icone = btn.querySelector("i");
-    if (favs.includes(id)) {
-      btn.classList.add("ativo");
-      icone.classList.replace("bi-heart", "bi-heart-fill");
-    } else {
-      btn.classList.remove("ativo");
-      icone.classList.replace("bi-heart-fill", "bi-heart");
-    }
   });
 }

@@ -1,99 +1,40 @@
-// filtro.js
+// Seleção de botões
+const btnTodos = document.getElementById("btnFiltrarTodos");
+const btnFavoritos = document.getElementById("btnFiltrarProdutosFavoritos");
+const btnTapetes = document.getElementById("btnFiltrarProdutosTapetes");
+const btnBolsas = document.getElementById("btnFiltrarProdutosBolsas");
+const btnCasacos = document.getElementById("btnFiltrarProdutosCasacos");
+const btnCalcados = document.getElementById("btnFiltrarProdutosCalcados");
+const btnKits = document.getElementById("btnFiltrarProdutosKits");
+const btnFestas = document.getElementById("btnFiltrarProdutosFestas");
 
-// Seleciona os botões de filtro
-const btnFiltrarTodos = document.getElementById("btnFiltrarTodos");
-const btnFiltrarProdutosTapetes = document.getElementById(
-  "btnFiltrarProdutosTapetes"
-);
-const btnFiltrarProdutosBolsas = document.getElementById(
-  "btnFiltrarProdutosBolsas"
-);
-const btnFiltrarProdutosCasacos = document.getElementById(
-  "btnFiltrarProdutosCasacos"
-);
-const btnFiltrarProdutosCalcados = document.getElementById(
-  "btnFiltrarProdutosCalcados"
-);
-const btnFiltrarProdutosKits = document.getElementById(
-  "btnFiltrarProdutosKits"
-);
-const btnFiltrarProdutosFestas = document.getElementById(
-  "btnFiltrarProdutosFestas"
-);
+// Função de filtragem
+function filtrarCategoria(categoria) {
+  let produtosFiltrados;
 
-// Função de filtro
-function filtrarProdutos(tipo) {
-  const produtosFiltrados = listaProdutos.filter(
-    (produto) => produto.tipo.toLowerCase() === tipo.toLowerCase()
-  );
-  // Chama a função do produtos.js para renderizar cards + modais
+  if (categoria === "Favoritos") {
+    const favs = JSON.parse(localStorage.getItem("favoritos")) || [];
+    produtosFiltrados = listaProdutos.filter((p) => favs.includes(p.nome));
+  } else if (categoria === "Todos") {
+    produtosFiltrados = listaProdutos;
+  } else {
+    produtosFiltrados = listaProdutos.filter((p) => p.tipo === categoria);
+  }
+
+  if (produtosFiltrados.length === 0) {
+    container.innerHTML = `<div class="text-center py-5"><h4>Nenhum produto encontrado 😢</h4></div>`;
+    return;
+  }
+
   renderizarProdutos(produtosFiltrados);
 }
 
-// Eventos de clique
-btnFiltrarTodos.addEventListener("click", () => {
-  renderizarProdutos(listaProdutos);
-});
-
-btnFiltrarProdutosTapetes.addEventListener("click", () =>
-  filtrarProdutos("tapetes")
-);
-btnFiltrarProdutosBolsas.addEventListener("click", () =>
-  filtrarProdutos("Bolsas")
-);
-btnFiltrarProdutosCasacos.addEventListener("click", () =>
-  filtrarProdutos("Casacos")
-);
-btnFiltrarProdutosCalcados.addEventListener("click", () =>
-  filtrarProdutos("Calçados")
-);
-btnFiltrarProdutosKits.addEventListener("click", () => filtrarProdutos("Kits"));
-btnFiltrarProdutosFestas.addEventListener("click", () =>
-  filtrarProdutos("Festas")
-);
-
-// ===== BUSCA DE PRODUTOS =====
-function buscarProdutos(termo) {
-  termo = termo.toLowerCase();
-  const filtrados = listaProdutos.filter(
-    (produto) =>
-      produto.nome.toLowerCase().includes(termo) ||
-      produto.descricao.toLowerCase().includes(termo) ||
-      produto.tipo.toLowerCase().includes(termo)
-  );
-  renderizarProdutos(filtrados);
-}
-
-// eventos para busca desktop e mobile
-const inputBusca = document.getElementById("buscaProduto");
-const inputBuscaMobile = document.getElementById("buscaProdutoMobile");
-
-if (inputBusca) {
-  inputBusca.addEventListener("input", (e) => buscarProdutos(e.target.value));
-}
-if (inputBuscaMobile) {
-  inputBuscaMobile.addEventListener("input", (e) =>
-    buscarProdutos(e.target.value)
-  );
-}
-
-// ===== ORDENAR PRODUTOS =====
-const selectOrdenar = document.getElementById("ordenarProdutos");
-
-if (selectOrdenar) {
-  selectOrdenar.addEventListener("change", (e) => {
-    const criterio = e.target.value;
-    let produtosAtuais = Array.from(container.children).map(
-      (el, index) => listaProdutos[index]
-    );
-    let ordenados = [...listaProdutos];
-
-    if (criterio === "nome") {
-      ordenados.sort((a, b) => a.nome.localeCompare(b.nome));
-    } else if (criterio === "preco") {
-      ordenados.sort((a, b) => a.preco - b.preco);
-    }
-
-    renderizarProdutos(ordenados);
-  });
-}
+// Eventos
+btnTodos.addEventListener("click", () => filtrarCategoria("Todos"));
+btnFavoritos.addEventListener("click", () => filtrarCategoria("Favoritos"));
+btnTapetes.addEventListener("click", () => filtrarCategoria("Tapetes"));
+btnBolsas.addEventListener("click", () => filtrarCategoria("Bolsas"));
+btnCasacos.addEventListener("click", () => filtrarCategoria("Casacos"));
+btnCalcados.addEventListener("click", () => filtrarCategoria("Calçados"));
+btnKits.addEventListener("click", () => filtrarCategoria("Kits"));
+btnFestas.addEventListener("click", () => filtrarCategoria("Festas"));
