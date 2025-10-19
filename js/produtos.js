@@ -25,11 +25,12 @@ function renderizarProdutos(produtos) {
   const favoritos = getFavoritos();
 
   produtos.forEach((produto, i) => {
-    const produtoId = produto.nome; // Usando nome como referência única para favoritos
+    const produtoId = produto.nome;
     const modalId = `modal${i}`;
     const carrosselId = `carousel${i}`;
     const isFav = favoritos.includes(produtoId);
 
+    // Card do produto
     const card = document.createElement("div");
     card.className = "col-12 col-md-6 col-xxl-4 pb-4";
     card.innerHTML = `
@@ -68,12 +69,15 @@ function renderizarProdutos(produtos) {
     modal.id = modalId;
     modal.tabIndex = -1;
     modal.setAttribute("aria-hidden", "true");
+
+    const descricaoModal = produto.descricaoCompleta || produto.descricao;
+
     modal.innerHTML = `
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header justify-content-center position-relative">
             <h5 class="modal-title modal-titulo">${produto.nome}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            <button type="button" class="btn-close btn-basket-style position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Fechar"></button>
           </div>
           <div class="modal-body">
             <div id="${carrosselId}" class="carousel slide" data-bs-ride="carousel">
@@ -101,15 +105,21 @@ function renderizarProdutos(produtos) {
                 <span class="visually-hidden">Próximo</span>
               </button>
             </div>
-            <p class="mt-3">${produto.descricao}</p>
+            <p class="mt-3">${descricaoModal}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn botao-claro" data-bs-dismiss="modal">Fechar</button>
           </div>
         </div>
       </div>
     `;
     document.body.appendChild(modal);
+
+    // Inicializa o modal com Bootstrap
+    new bootstrap.Modal(modal);
   });
 
-  // Adicionar evento de favoritos
+  // Evento de favoritos
   document.querySelectorAll(".btn-favorito").forEach((btn) => {
     btn.addEventListener("click", () => {
       const nome = btn.getAttribute("data-nome");
@@ -120,7 +130,7 @@ function renderizarProdutos(produtos) {
         favs.push(nome);
       }
       salvarFavoritos(favs);
-      renderizarProdutos(produtos); // Atualiza visual
+      renderizarProdutos(produtos);
     });
   });
 }

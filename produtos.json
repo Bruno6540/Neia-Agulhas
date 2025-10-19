@@ -3,6 +3,7 @@
     "nome": "Tapete Verde",
     "imagens": ["./assets/Tapete.png", "./assets/Tapete.png", "./assets/Tapete.png", "./assets/Trilho.png"],
     "descricao": "Tapete macio, feito à mão, perfeito para salas e quartos.",
+    "descricaoCompleta": "Mensagem de texto de teste para verificar se consegui usar mensagens padronizadas e completas em outros lugare, esse texto não queri dizer nada, apenas teste mesmo e me impreciona o fato de você ainda estar aqui lendo mesmo sabendo que não estou dizendo nada com nada. Quanto mais você lê, mais tempo você perde, já que meu intuito aqui é unica e exclusivamente gerar linhas de texto para verificar se um texto grande e elaborado atrapalharia a experiênia do usuario com o site quando abrir o card e o carrossel de imagens.",
     "preco": "R$70,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Tapete Verde.",
     "tipo": "Tapetes"
@@ -11,6 +12,7 @@
     "nome": "Bolsa Vermelha",
     "imagens": ["./assets/Trilho.png", "./assets/Trilho.png", "./assets/Trilho.png", "./assets/Tapete.png"],
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
+    "descricaoCompleta": "Mensagem de texto de teste para verificar se consegui usar mensagens padronizadas e completas em outros lugare, esse texto não queri dizer nada, apenas teste mesmo e me impreciona o fato de você ainda estar aqui lendo mesmo sabendo que não estou dizendo nada com nada. Quanto mais você lê, mais tempo você perde, já que meu intuito aqui é unica e exclusivamente gerar linhas de texto para verificar se um texto grande e elaborado atrapalharia a experiênia do usuario com o site quando abrir o card e o carrossel de imagens.",
     "preco": "R$50,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Vermelho.",
     "tipo": "Bolsas"
@@ -19,6 +21,7 @@
     "nome": "Casaco Verde",
     "imagens": ["./assets/Tapete.png", "./assets/Tapete.png", "./assets/Tapete.png", "./assets/Trilho.png"],
     "descricao": "Tapete macio, feito à mão, perfeito para salas e quartos.",
+    "descricaoCompleta": "Mensagem de texto de teste para verificar se consegui usar mensagens padronizadas e completas em outros lugare, esse texto não queri dizer nada, apenas teste mesmo e me impreciona o fato de você ainda estar aqui lendo mesmo sabendo que não estou dizendo nada com nada. Quanto mais você lê, mais tempo você perde, já que meu intuito aqui é unica e exclusivamente gerar linhas de texto para verificar se um texto grande e elaborado atrapalharia a experiênia do usuario com o site quando abrir o card e o carrossel de imagens.",
     "preco": "R$70,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Tapete Verde.",
     "tipo": "Casacos"
@@ -27,6 +30,7 @@
     "nome": "Sapato",
     "imagens": ["./assets/Trilho.png", "./assets/Trilho.png", "./assets/Trilho.png", "./assets/Tapete.png"],
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
+    "descricaoCompleta": "Mensagem de texto de teste para verificar se consegui usar mensagens padronizadas e completas em outros lugare, esse texto não queri dizer nada, apenas teste mesmo e me impreciona o fato de você ainda estar aqui lendo mesmo sabendo que não estou dizendo nada com nada. Quanto mais você lê, mais tempo você perde, já que meu intuito aqui é unica e exclusivamente gerar linhas de texto para verificar se um texto grande e elaborado atrapalharia a experiênia do usuario com o site quando abrir o card e o carrossel de imagens.",
     "preco": "R$50,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Vermelho.",
     "tipo": "Calçados"
@@ -35,6 +39,7 @@
     "nome": "Kit completo",
     "imagens": ["./assets/Tapete.png", "./assets/Tapete.png", "./assets/Tapete.png", "./assets/Trilho.png"],
     "descricao": "Tapete macio, feito à mão, perfeito para salas e quartos.",
+    "descricaoCompleta": "Mensagem de texto de teste para verificar se consegui usar mensagens padronizadas e completas em outros lugare, esse texto não queri dizer nada, apenas teste mesmo e me impreciona o fato de você ainda estar aqui lendo mesmo sabendo que não estou dizendo nada com nada. Quanto mais você lê, mais tempo você perde, já que meu intuito aqui é unica e exclusivamente gerar linhas de texto para verificar se um texto grande e elaborado atrapalharia a experiênia do usuario com o site quando abrir o card e o carrossel de imagens.",
     "preco": "R$70,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Tapete Verde.",
     "tipo": "Kits"
@@ -43,6 +48,7 @@
     "nome": "Produto de Festa",
     "imagens": ["./assets/Trilho.png", "./assets/Trilho.png", "./assets/Trilho.png", "./assets/Tapete.png"],
     "descricao": "Trilho artesanal, ideal para decorar mesas com elegância.",
+    "descricaoCompleta": "Mensagem de texto de teste para verificar se consegui usar mensagens padronizadas e completas em outros lugare, esse texto não queri dizer nada, apenas teste mesmo e me impreciona o fato de você ainda estar aqui lendo mesmo sabendo que não estou dizendo nada com nada. Quanto mais você lê, mais tempo você perde, já que meu intuito aqui é unica e exclusivamente gerar linhas de texto para verificar se um texto grande e elaborado atrapalharia a experiênia do usuario com o site quando abrir o card e o carrossel de imagens.",
     "preco": "R$50,00",
     "whatsappMsg": "Olá! Gostaria de informações sobre o Trilho Vermelho.",
     "tipo": "Festas"
