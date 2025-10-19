@@ -73,7 +73,7 @@ function renderizarProdutos(produtos) {
     const descricaoModal = produto.descricaoCompleta || produto.descricao;
 
     modal.innerHTML = `
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-lg modal-dialog-centered custom-modal">
         <div class="modal-content">
           <div class="modal-header justify-content-center position-relative">
             <h5 class="modal-title modal-titulo">${produto.nome}</h5>
